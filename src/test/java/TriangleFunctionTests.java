@@ -10,7 +10,7 @@ public class TriangleFunctionTests {
     private static final int ISOSCELES = 2;
     private static final int EQUILATERAL = 3;
     private static final int ERROR = 4;
-    public Triangle triangle;
+    private Triangle triangle;
 
     @Before
     public void setTriangle(){
@@ -26,7 +26,7 @@ public class TriangleFunctionTests {
 
     @Test
     public void isoscelesTriangleTest() {
-        int triangleType = triangle.getTriangleType(5,2,2);
+        int triangleType = triangle.getTriangleType(3,2,2);
 
         assertThat(triangleType, is(equalTo(ISOSCELES)));
     }
