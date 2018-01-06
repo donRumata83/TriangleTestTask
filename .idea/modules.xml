@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TriangleTestTask.iml" filepath="$PROJECT_DIR$/.idea/modules/TriangleTestTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TriangleTestTask_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TriangleTestTask_main.iml" group="TriangleTestTask" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TriangleTestTask_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TriangleTestTask_test.iml" group="TriangleTestTask" />
     </modules>
   </component>
 </project>
