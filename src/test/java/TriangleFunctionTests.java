@@ -49,7 +49,7 @@ public class TriangleFunctionTests {
     }
 
     @Test
-    public void ShouldReturnErrorCodeWhenNullEnter() {
+    public void shouldReturnErrorOnNullParam() {
         //given
         int a = 1;
         int b = 2;
@@ -61,7 +61,7 @@ public class TriangleFunctionTests {
     }
 
     @Test
-    public void ShouldReturnErrorCodeNegativeNumberEnter() {
+    public void shouldReturnErrorOnNegativeParams() {
         //given
         int a = -1;
         int b = -1;
@@ -73,7 +73,7 @@ public class TriangleFunctionTests {
     }
 
     @Test
-    public void ShouldReturnErrorCodeNotTriangleEnter() {
+    public void shouldReturnErrorWhenParamsIsNotTriangle() {
         //given
         int a = 1;
         int b = 2;
@@ -85,7 +85,7 @@ public class TriangleFunctionTests {
     }
 
     @Test
-    public void shouldReturnErrorWhenLineLehgthEnter() {
+    public void shouldReturnErrorWhenLineLengthInParams() {
         //given
         int a = 3;
         int b = 2;

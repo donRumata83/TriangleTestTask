@@ -9,15 +9,16 @@ class Triangle {
     /**
      * This method verifies whether given three integers could be a sides of a triangle,
      * and returns the type of it.
-     * @param firstSide  a length of first the triangle side
-     * @param secondSide a length of second the triangle side
-     * @param thirdSide  a length of second the triangle side
+     *
+     * @param firstSide  a length of the first triangle side
+     * @param secondSide a length of the second triangle side
+     * @param thirdSide  a length of the third triangle side
      * @return integer value of triangle type
-     * 1- if it is firstSide scalene triangle, 2 - for isosceles triangle,
-     * 3 - for equilateral triangle, 4 - if it is not firstSide triangle or if was
+     * possible values: 1- for scalene triangle, 2 - for isosceles triangle,
+     * 3 - for equilateral triangle, 4 - if it is not a triangle or if was
      * entered negative number or null
      */
-    static int getTriangleType(int firstSide, int secondSide, int thirdSide) {
+    public static int getTriangleType(int firstSide, int secondSide, int thirdSide) {
         int[] array = {firstSide, secondSide, thirdSide};
         Arrays.sort(array);
         firstSide = array[0];
