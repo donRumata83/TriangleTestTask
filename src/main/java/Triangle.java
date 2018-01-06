@@ -24,9 +24,9 @@ class Triangle {
         Collections.sort(list);
         if (list.get(0) <= 0) return ERROR;
         if ((list.get(0) + list.get(1)) <= list.get(2)) return ERROR;
-        if (list.get(0) == list.get(1) && list.get(1) == list.get(2)) return EQUILATERAL;
+        if (list.get(0).equals(list.get(1)) && list.get(1).equals(list.get(2))) return EQUILATERAL;
         else {
-            if (list.get(0) == list.get(1) || list.get(1) == list.get(2)) return ISOSCELES;
+            if (list.get(0).equals(list.get(1)) || list.get(1).equals(list.get(2))) return ISOSCELES;
             else return SCALENE;
         }
     }
