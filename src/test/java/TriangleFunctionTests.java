@@ -13,9 +13,10 @@ public class TriangleFunctionTests {
     private Triangle triangle;
 
     @Before
-    public void setTriangle(){
+    public void setTriangle() {
         triangle = new Triangle();
     }
+
     @Test
     public void equilateralTriangleTest() {
         int triangleType = triangle.getTriangleType(2, 2, 2);
@@ -26,21 +27,21 @@ public class TriangleFunctionTests {
 
     @Test
     public void isoscelesTriangleTest() {
-        int triangleType = triangle.getTriangleType(3,2,2);
+        int triangleType = triangle.getTriangleType(3, 2, 2);
 
         assertThat(triangleType, is(equalTo(ISOSCELES)));
     }
 
     @Test
-    public void scaleneTriangleTest(){
-        int triangleType = triangle.getTriangleType(2,3,4);
+    public void scaleneTriangleTest() {
+        int triangleType = triangle.getTriangleType(2, 3, 4);
 
         assertThat(triangleType, is(equalTo(SCALENE)));
     }
 
     @Test
-    public void nullEnterTest(){
-        int triangleType = triangle.getTriangleType(1,2,0);
+    public void nullEnterTest() {
+        int triangleType = triangle.getTriangleType(1, 2, 0);
 
         assertThat(triangleType, is(equalTo(ERROR)));
     }
@@ -53,17 +54,16 @@ public class TriangleFunctionTests {
     }
 
     @Test
-    public void notTriangleEnterTest(){
-        int triangleType = triangle.getTriangleType(1,2,5);
+    public void notTriangleEnterTest() {
+        int triangleType = triangle.getTriangleType(1, 2, 5);
 
         assertThat(triangleType, is(equalTo(ERROR)));
     }
 
     @Test
-    public void testWhenLineLehgthEnter(){
+    public void testWhenLineLehgthEnter() {
         int triangleType = triangle.getTriangleType(3, 2, 1);
 
         assertThat(triangleType, is(equalTo(ERROR)));
     }
-
 }
