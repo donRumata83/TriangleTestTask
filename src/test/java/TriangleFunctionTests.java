@@ -1,4 +1,4 @@
-import org.junit.Before;
+
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
@@ -10,60 +10,89 @@ public class TriangleFunctionTests {
     private static final int ISOSCELES = 2;
     private static final int EQUILATERAL = 3;
     private static final int ERROR = 4;
-    private Triangle triangle;
-
-    @Before
-    public void setTriangle() {
-        triangle = new Triangle();
-    }
 
     @Test
-    public void equilateralTriangleTest() {
-        int triangleType = triangle.getTriangleType(2, 2, 2);
-
+    public void verifiesThatTriangleIsEquilateral() {
+        //given
+        int a = 2;
+        int b = 2;
+        int c = 2;
+        //when
+        int triangleType = Triangle.getTriangleType(a, b, c);
+        //then
         assertThat(triangleType, is(equalTo(EQUILATERAL)));
     }
 
 
     @Test
-    public void isoscelesTriangleTest() {
-        int triangleType = triangle.getTriangleType(3, 2, 2);
-
+    public void verifiesThatTriangleIsIsosceles() {
+        //given
+        int a = 3;
+        int b = 2;
+        int c = 2;
+        //when
+        int triangleType = Triangle.getTriangleType(a, b, c);
+        //then
         assertThat(triangleType, is(equalTo(ISOSCELES)));
     }
 
     @Test
-    public void scaleneTriangleTest() {
-        int triangleType = triangle.getTriangleType(2, 3, 4);
-
+    public void verifiesThatTriangleIsScalene() {
+        //given
+        int a = 2;
+        int b = 3;
+        int c = 4;
+        //when
+        int triangleType = Triangle.getTriangleType(a, b, c);
+        //then
         assertThat(triangleType, is(equalTo(SCALENE)));
     }
 
     @Test
-    public void nullEnterTest() {
-        int triangleType = triangle.getTriangleType(1, 2, 0);
-
+    public void ShouldReturnErrorCodeWhenNullEnter() {
+        //given
+        int a = 1;
+        int b = 2;
+        int c = 0;
+        //when
+        int triangleType = Triangle.getTriangleType(a, b, c);
+        //then
         assertThat(triangleType, is(equalTo(ERROR)));
     }
 
     @Test
-    public void negativeNumberEnterTest() {
-        int triangleType = triangle.getTriangleType(-1, -1, 2);
-
+    public void ShouldReturnErrorCodeNegativeNumberEnter() {
+        //given
+        int a = -1;
+        int b = -1;
+        int c = 2;
+        //when
+        int triangleType = Triangle.getTriangleType(a, b, c);
+        //then
         assertThat(triangleType, is(equalTo(ERROR)));
     }
 
     @Test
-    public void notTriangleEnterTest() {
-        int triangleType = triangle.getTriangleType(1, 2, 5);
-
+    public void ShouldReturnErrorCodeNotTriangleEnter() {
+        //given
+        int a = 1;
+        int b = 2;
+        int c = 5;
+        //when
+        int triangleType = Triangle.getTriangleType(a, b, c);
+        //then
         assertThat(triangleType, is(equalTo(ERROR)));
     }
 
     @Test
-    public void testWhenLineLehgthEnter() {
-        int triangleType = triangle.getTriangleType(3, 2, 1);
-
+    public void shouldReturnErrorWhenLineLehgthEnter() {
+        //given
+        int a = 3;
+        int b = 2;
+        int c = 1;
+        //when
+        int triangleType = Triangle.getTriangleType(a, b, c);
+        //then
         assertThat(triangleType, is(equalTo(ERROR)));
     }
 }

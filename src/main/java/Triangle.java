@@ -7,28 +7,27 @@ class Triangle {
     private static final int ERROR = 4;
 
     /**
-     * Method checks is the three integer could be a sides of triangle,
+     * This method verifies whether given three integers could be a sides of a triangle,
      * and returns the type of it.
-     * 1- if it is a scalene triangle, 2 - for isosceles triangle,
-     * 3 - for equilateral triangle, 4 - if it is not a triangle or if was
-     * entered negative number or null
-     *
-     * @param a, a length of first the triangle side
-     * @param b, a length of second the triangle side
-     * @param c, a length of second the triangle side
+     * @param firstSide  a length of first the triangle side
+     * @param secondSide a length of second the triangle side
+     * @param thirdSide  a length of second the triangle side
      * @return integer value of triangle type
+     * 1- if it is firstSide scalene triangle, 2 - for isosceles triangle,
+     * 3 - for equilateral triangle, 4 - if it is not firstSide triangle or if was
+     * entered negative number or null
      */
-    int getTriangleType(int a, int b, int c) {
-        int[] array = {a, b, c};
+    public  static int getTriangleType(int firstSide, int secondSide, int thirdSide) {
+        int[] array = {firstSide, secondSide, thirdSide};
         Arrays.sort(array);
-        a = array[0];
-        b = array[1];
-        c = array[2];
-        if (a <= 0) return ERROR;
-        if ((a + b) <= c) return ERROR;
-        if (a == b && b == c) return EQUILATERAL;
+        firstSide = array[0];
+        secondSide = array[1];
+        thirdSide = array[2];
+        if (firstSide <= 0) return ERROR;
+        if ((firstSide + secondSide) <= thirdSide) return ERROR;
+        if (firstSide == secondSide && secondSide == thirdSide) return EQUILATERAL;
         else {
-            if (a == b || b == c) return ISOSCELES;
+            if (firstSide == secondSide || secondSide == thirdSide) return ISOSCELES;
             else return SCALENE;
         }
     }
