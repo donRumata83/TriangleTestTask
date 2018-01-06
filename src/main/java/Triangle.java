@@ -17,7 +17,7 @@ class Triangle {
      * 3 - for equilateral triangle, 4 - if it is not firstSide triangle or if was
      * entered negative number or null
      */
-    public  static int getTriangleType(int firstSide, int secondSide, int thirdSide) {
+    static int getTriangleType(int firstSide, int secondSide, int thirdSide) {
         int[] array = {firstSide, secondSide, thirdSide};
         Arrays.sort(array);
         firstSide = array[0];
