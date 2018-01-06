@@ -14,19 +14,22 @@ class Triangle {
      * 1- if it is a scalene triangle, 2 - for isosceles triangle,
      * 3 - for equilateral triangle, 4 - if it is not a triangle or if was
      * entered negative number or null
-     * @param a int, length of first triangle side
-     * @param b int, length of second triangle side
-     * @param c int, length of second triangle side
+     * @param a, a length of first the triangle side
+     * @param b, a length of second the triangle side
+     * @param c, a length of second the triangle side
      * @return integer value of triangle type
      */
     int getTriangleType(int a, int b, int c) {
-        List<Integer> list = Arrays.asList(a, b, c);
-        Collections.sort(list);
-        if (list.get(0) <= 0) return ERROR;
-        if ((list.get(0) + list.get(1)) <= list.get(2)) return ERROR;
-        if (list.get(0).equals(list.get(1)) && list.get(1).equals(list.get(2))) return EQUILATERAL;
+        int[] array = {a,b,c};
+        Arrays.sort(array);
+        a = array[0];
+        b = array[1];
+        c = array[2];
+        if (a <= 0) return ERROR;
+        if ((a + b) <= c) return ERROR;
+        if (a == b && b==c) return EQUILATERAL;
         else {
-            if (list.get(0).equals(list.get(1)) || list.get(1).equals(list.get(2))) return ISOSCELES;
+            if (a == b || b == c) return ISOSCELES;
             else return SCALENE;
         }
     }
