@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class Triangle {
+public class Triangle {
     private static final int SCALENE = 1;
     private static final int ISOSCELES = 2;
     private static final int EQUILATERAL = 3;
